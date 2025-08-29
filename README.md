@@ -99,13 +99,13 @@ Requirement Analysis is a critical phase in the software development lifecycle (
 
 ### 1. Functional Requirements
 **Definition**: Describe what the system should do.
-#### 1. Hotel Management
+#### Hotel Management
   - Add, update, and delete hotel/property listings (name, location, price, rooms, amenities, photos).  
   - Sync data between Master DB (write) and Slave DB (read).  
   - Push hotel updates to CDN for faster customer delivery.  
   - Publish updates to a messaging queue (Kafka/RabbitMQ).  
 
-#### 2. Customer Search & Booking
+#### Customer Search & Booking
   - Search hotels by filters (location, price, date, amenities, rating).  
   - Display search results quickly using **Elasticsearch + CDN**.  
   - Book hotel rooms in real time with availability locking.  
@@ -113,13 +113,13 @@ Requirement Analysis is a critical phase in the software development lifecycle (
   - Cache frequently accessed search data in **Redis**.  
   - Store booking history in DB; archive older records in **Cassandra**.  
 
-#### 3. View Bookings
+#### View Bookings
   - Customers can view **upcoming and past bookings**.  
   - Managers can view bookings for their properties.  
   - Recent bookings retrieved via **Redis cache**.  
   - Archived bookings retrieved from **Cassandra**.  
 
-#### 4. Notifications & Analytics
+#### Notifications & Analytics
   - Notify customers (confirmation, cancellation, offers) and managers (new bookings).  
   - Stream booking events to **Kafka** for real-time processing.  
   - Store events/transactions in **Hadoop** for big data analytics.  
@@ -157,7 +157,7 @@ Requirement Analysis is a critical phase in the software development lifecycle (
 - Intuitive UI for customers and managers.  
 - **Multilingual** and **multi-currency** support.  
 
-####Durability
+#### Durability
 - Archived booking data persisted in **Cassandra**.  
 - Backup + recovery mechanisms for all critical DBs.  
 
@@ -184,6 +184,8 @@ Use Case Diagrams are simple, high-level diagrams that model how users interact 
 - Supports Requirement Gathering
 - Foundation for Design & Testing
 
+
+![Use Case Diagram](alx-booking-uc.png)
 <p align="right"><a href="#readme-top">👆</a></p>
 
 <!-- Acceptance Criteria-->
